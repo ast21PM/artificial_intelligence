@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #1a1a1a;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -22,23 +22,25 @@
         }
 
         .container {
-            background: white;
+            background: #2a2a2a;
             border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
             width: 100%;
             max-width: 900px;
             height: 90vh;
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            border: 1px solid #3a3a3a;
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: #1f1f1f;
+            color: #e0e0e0;
             padding: 20px 30px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid #3a3a3a;
         }
 
         .header h1 {
@@ -52,9 +54,9 @@
         }
 
         .settings-panel {
-            background: #f8f9fa;
+            background: #252525;
             padding: 15px 30px;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid #3a3a3a;
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
@@ -66,22 +68,24 @@
             align-items: center;
             gap: 10px;
             font-size: 14px;
-            color: #333;
+            color: #b0b0b0;
         }
 
         .settings-panel input[type="number"],
         .settings-panel select {
             padding: 5px 10px;
-            border: 1px solid #ddd;
+            border: 1px solid #4a4a4a;
             border-radius: 5px;
             font-size: 14px;
             width: 100px;
+            background: #333;
+            color: #e0e0e0;
         }
 
         .settings-panel button {
-            background: #667eea;
-            color: white;
-            border: none;
+            background: #3a3a3a;
+            color: #e0e0e0;
+            border: 1px solid #4a4a4a;
             padding: 8px 15px;
             border-radius: 5px;
             cursor: pointer;
@@ -90,14 +94,14 @@
         }
 
         .settings-panel button:hover {
-            background: #5568d3;
+            background: #4a4a4a;
         }
 
         .chat-container {
             flex: 1;
             overflow-y: auto;
             padding: 30px;
-            background: #f5f5f5;
+            background: #1f1f1f;
         }
 
         .message {
@@ -135,37 +139,39 @@
         }
 
         .message.user .message-avatar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #3a3a3a;
         }
 
         .message.assistant .message-avatar {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: #2a2a2a;
         }
 
         .message-content {
-            background: white;
+            background: #2a2a2a;
             padding: 15px 20px;
             border-radius: 15px;
             max-width: 70%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             word-wrap: break-word;
+            color: #e0e0e0;
+            border: 1px solid #3a3a3a;
         }
 
         .message.user .message-content {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: #3a3a3a;
+            color: #e0e0e0;
         }
 
         .message.error .message-content {
-            background: #ffebee;
-            color: #c62828;
-            border-left: 4px solid #c62828;
+            background: #3a2020;
+            color: #ff6b6b;
+            border-left: 4px solid #ff6b6b;
         }
 
         .input-container {
             padding: 20px 30px;
-            background: white;
-            border-top: 1px solid #e0e0e0;
+            background: #252525;
+            border-top: 1px solid #3a3a3a;
             display: flex;
             gap: 15px;
         }
@@ -173,23 +179,25 @@
         .input-container textarea {
             flex: 1;
             padding: 15px;
-            border: 2px solid #e0e0e0;
+            border: 2px solid #3a3a3a;
             border-radius: 10px;
             font-size: 16px;
             font-family: inherit;
             resize: none;
             outline: none;
             transition: border-color 0.3s;
+            background: #2a2a2a;
+            color: #e0e0e0;
         }
 
         .input-container textarea:focus {
-            border-color: #667eea;
+            border-color: #4a4a4a;
         }
 
         .input-container button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
+            background: #3a3a3a;
+            color: #e0e0e0;
+            border: 1px solid #4a4a4a;
             padding: 15px 30px;
             border-radius: 10px;
             font-size: 16px;
@@ -200,7 +208,8 @@
 
         .input-container button:hover:not(:disabled) {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            background: #4a4a4a;
         }
 
         .input-container button:disabled {
@@ -218,7 +227,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #667eea;
+            background: #6a6a6a;
             animation: loading 1.4s infinite ease-in-out;
         }
 
@@ -232,12 +241,12 @@
 
         .welcome-message {
             text-align: center;
-            color: #666;
+            color: #8a8a8a;
             padding: 40px 20px;
         }
 
         .welcome-message h2 {
-            color: #667eea;
+            color: #b0b0b0;
             margin-bottom: 10px;
         }
 
@@ -250,23 +259,21 @@
         }
 
         .status-indicator.connected {
-            background: #4caf50;
+            background: #4a7c4e;
         }
 
         .status-indicator.disconnected {
-            background: #f44336;
+            background: #8a4a44;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Заголовок приложения -->
         <div class="header">
             <h1>🤖 Интеллектуальный помощник</h1>
             <p>Лабораторная работа №5 - Интеграция с LLM через Ollama</p>
         </div>
 
-        <!-- Панель настроек модели -->
         <div class="settings-panel">
             <label>
                 <span class="status-indicator" id="statusIndicator"></span>
@@ -275,10 +282,8 @@
             <label>
                 Модель:
                 <select id="modelSelect">
-                    <option value="llama2">llama2</option>
-                    <option value="mistral">mistral</option>
-                    <option value="codellama">codellama</option>
-                    <option value="llama3">llama3</option>
+                    <option value="gemma3:4b">gemma3:4b</option>
+                    <option value="gemma3:1b">gemma3:1b</option>
                 </select>
             </label>
             <label>
@@ -292,7 +297,6 @@
             <button onclick="clearHistory()">Очистить историю</button>
         </div>
 
-        <!-- Контейнер для сообщений чата -->
         <div class="chat-container" id="chatContainer">
             <div class="welcome-message">
                 <h2>Добро пожаловать!</h2>
@@ -303,7 +307,6 @@
             </div>
         </div>
 
-        <!-- Контейнер для ввода сообщений -->
         <div class="input-container">
             <textarea
                 id="userInput"
@@ -316,58 +319,30 @@
     </div>
 
     <script>
-        // ==========================================
-        // КОНФИГУРАЦИЯ И ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ
-        // ==========================================
-
-        // URL для подключения к локальному серверу Ollama
         const OLLAMA_API_URL = 'http://localhost:11434/api/generate';
-
-        // История сообщений для контекста беседы
         let conversationHistory = [];
-
-        // Флаг для отслеживания состояния обработки запроса
         let isProcessing = false;
 
-        // ==========================================
-        // ПРОВЕРКА ПОДКЛЮЧЕНИЯ К OLLAMA
-        // ==========================================
-
-        /**
-         * Проверяет доступность API Ollama при загрузке страницы
-         * Отображает статус подключения в интерфейсе
-         */
         async function checkOllamaConnection() {
             const statusIndicator = document.getElementById('statusIndicator');
             const statusText = document.getElementById('statusText');
 
             try {
-                // Пытаемся выполнить тестовый запрос к Ollama API
                 const response = await fetch('http://localhost:11434/api/tags');
 
                 if (response.ok) {
-                    // Успешное подключение
                     statusIndicator.className = 'status-indicator connected';
                     statusText.textContent = 'Ollama подключен';
                 } else {
                     throw new Error('Ollama не отвечает');
                 }
             } catch (error) {
-                // Ошибка подключения
                 statusIndicator.className = 'status-indicator disconnected';
                 statusText.textContent = 'Ollama не подключен';
                 console.error('Ошибка подключения к Ollama:', error);
             }
         }
 
-        // ==========================================
-        // ОБРАБОТКА ПОЛЬЗОВАТЕЛЬСКОГО ВВОДА
-        // ==========================================
-
-        /**
-         * Обрабатывает нажатие клавиш в поле ввода
-         * Enter - отправка сообщения, Shift+Enter - новая строка
-         */
         function handleKeyPress(event) {
             if (event.key === 'Enter' && !event.shiftKey) {
                 event.preventDefault();
@@ -375,62 +350,44 @@
             }
         }
 
-        /**
-         * Основная функция отправки сообщения в LLM
-         * Обрабатывает весь цикл: отправка -> получение ответа -> отображение
-         */
         async function sendMessage() {
-            // Получаем текст сообщения пользователя
             const userInput = document.getElementById('userInput');
             const message = userInput.value.trim();
 
-            // Проверка: сообщение не пустое и нет активной обработки
             if (!message || isProcessing) return;
 
-            // Устанавливаем флаг обработки
             isProcessing = true;
             const sendButton = document.getElementById('sendButton');
             sendButton.disabled = true;
 
-            // Очищаем поле ввода
             userInput.value = '';
 
-            // Отображаем сообщение пользователя в чате
             displayMessage(message, 'user');
 
-            // Добавляем сообщение в историю разговора
             conversationHistory.push({
                 role: 'user',
                 content: message
             });
 
-            // Показываем индикатор загрузки
             const loadingId = showLoading();
 
             try {
-                // ==========================================
-                // ОТПРАВКА ЗАПРОСА К OLLAMA API
-                // ==========================================
-
-                // Получаем параметры модели из интерфейса
                 const model = document.getElementById('modelSelect').value;
                 const temperature = parseFloat(document.getElementById('temperature').value);
                 const maxTokens = parseInt(document.getElementById('maxTokens').value);
 
-                // Формируем тело запроса для Ollama API
                 const requestBody = {
                     model: model,
                     prompt: message,
-                    stream: false,  // Отключаем потоковую передачу для простоты
+                    stream: false,
                     options: {
                         temperature: temperature,
-                        num_predict: maxTokens  // Максимальное количество токенов в ответе
+                        num_predict: maxTokens
                     }
                 };
 
                 console.log('Отправка запроса к Ollama:', requestBody);
 
-                // Выполняем HTTP POST запрос к Ollama API
                 const response = await fetch(OLLAMA_API_URL, {
                     method: 'POST',
                     headers: {
@@ -439,45 +396,30 @@
                     body: JSON.stringify(requestBody)
                 });
 
-                // Убираем индикатор загрузки
                 removeLoading(loadingId);
-
-                // ==========================================
-                // ОБРАБОТКА ОТВЕТА ОТ API
-                // ==========================================
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
 
-                // Парсим JSON ответ от Ollama
                 const data = await response.json();
                 console.log('Получен ответ от Ollama:', data);
 
-                // Извлекаем текст ответа из JSON
                 const assistantMessage = data.response || 'Извините, не удалось получить ответ.';
 
-                // Отображаем ответ ассистента в чате
                 displayMessage(assistantMessage, 'assistant');
 
-                // Добавляем ответ в историю разговора
                 conversationHistory.push({
                     role: 'assistant',
                     content: assistantMessage
                 });
 
-                // Сохраняем историю в localStorage для персистентности
                 saveHistory();
 
             } catch (error) {
-                // ==========================================
-                // ОБРАБОТКА ОШИБОК
-                // ==========================================
-
                 console.error('Ошибка при отправке запроса:', error);
                 removeLoading(loadingId);
 
-                // Формируем информативное сообщение об ошибке
                 let errorMessage = 'Произошла ошибка при обращении к модели. ';
 
                 if (error.message.includes('Failed to fetch')) {
@@ -486,39 +428,25 @@
                     errorMessage += error.message;
                 }
 
-                // Отображаем ошибку в интерфейсе
                 displayMessage(errorMessage, 'error');
             } finally {
-                // Снимаем флаг обработки и разблокируем кнопку
                 isProcessing = false;
                 sendButton.disabled = false;
                 userInput.focus();
             }
         }
 
-        // ==========================================
-        // ФУНКЦИИ ОТОБРАЖЕНИЯ СООБЩЕНИЙ
-        // ==========================================
-
-        /**
-         * Отображает сообщение в контейнере чата
-         * @param {string} message - Текст сообщения
-         * @param {string} type - Тип сообщения: 'user', 'assistant', 'error'
-         */
         function displayMessage(message, type) {
             const chatContainer = document.getElementById('chatContainer');
 
-            // Удаляем приветственное сообщение при первом сообщении
             const welcomeMessage = chatContainer.querySelector('.welcome-message');
             if (welcomeMessage) {
                 welcomeMessage.remove();
             }
 
-            // Создаем элемент сообщения
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${type}`;
 
-            // Определяем иконку для аватара
             const avatarText = type === 'user' ? '👤' : (type === 'error' ? '⚠️' : '🤖');
 
             messageDiv.innerHTML = `
@@ -528,24 +456,13 @@
 
             chatContainer.appendChild(messageDiv);
 
-            // Прокручиваем чат к последнему сообщению
             chatContainer.scrollTop = chatContainer.scrollHeight;
         }
 
-        /**
-         * Форматирует текст сообщения (обработка переносов строк, ссылок и т.д.)
-         * @param {string} text - Исходный текст
-         * @returns {string} - Отформатированный HTML
-         */
         function formatMessage(text) {
-            // Заменяем переносы строк на <br>
             return text.replace(/\n/g, '<br>');
         }
 
-        /**
-         * Показывает индикатор загрузки
-         * @returns {string} - ID элемента загрузки
-         */
         function showLoading() {
             const chatContainer = document.getElementById('chatContainer');
             const loadingDiv = document.createElement('div');
@@ -567,10 +484,6 @@
             return loadingId;
         }
 
-        /**
-         * Удаляет индикатор загрузки
-         * @param {string} loadingId - ID элемента загрузки
-         */
         function removeLoading(loadingId) {
             const loadingElement = document.getElementById(loadingId);
             if (loadingElement) {
@@ -578,13 +491,6 @@
             }
         }
 
-        // ==========================================
-        // УПРАВЛЕНИЕ ИСТОРИЕЙ РАЗГОВОРА
-        // ==========================================
-
-        /**
-         * Сохраняет историю разговора в localStorage
-         */
         function saveHistory() {
             try {
                 localStorage.setItem('chatHistory', JSON.stringify(conversationHistory));
@@ -593,16 +499,12 @@
             }
         }
 
-        /**
-         * Загружает историю разговора из localStorage
-         */
         function loadHistory() {
             try {
                 const saved = localStorage.getItem('chatHistory');
                 if (saved) {
                     conversationHistory = JSON.parse(saved);
 
-                    // Отображаем сохраненные сообщения
                     conversationHistory.forEach(msg => {
                         displayMessage(msg.content, msg.role === 'user' ? 'user' : 'assistant');
                     });
@@ -612,15 +514,11 @@
             }
         }
 
-        /**
-         * Очищает историю разговора
-         */
         function clearHistory() {
             if (confirm('Вы уверены, что хотите очистить историю чата?')) {
                 conversationHistory = [];
                 localStorage.removeItem('chatHistory');
 
-                // Очищаем контейнер чата
                 const chatContainer = document.getElementById('chatContainer');
                 chatContainer.innerHTML = `
                     <div class="welcome-message">
@@ -634,11 +532,6 @@
             }
         }
 
-        // ==========================================
-        // ИНИЦИАЛИЗАЦИЯ ПРИЛОЖЕНИЯ
-        // ==========================================
-
-        // Проверяем подключение к Ollama при загрузке страницы
         window.addEventListener('load', () => {
             checkOllamaConnection();
             loadHistory();
